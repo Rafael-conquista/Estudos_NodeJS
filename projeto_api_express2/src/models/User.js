@@ -52,6 +52,10 @@ export default class User extends Model {
 
     return this;
   }
+
+  passwordIsValid(password) {
+    return bcryptjs.compare(password, this.password_hash);
+  }
 }
 
 // bcrypt consegue gerar um hash da senha em questão, gerando mais segurança no cadastro de um usuário

@@ -1,9 +1,9 @@
 import Aluno from '../models/Aluno';
 
-class HomeController {
+class AlunoController {
   async index(req, res) {
     res.json('ok');
   }
 }
 
-export default new HomeController();
+export default new AlunoController();

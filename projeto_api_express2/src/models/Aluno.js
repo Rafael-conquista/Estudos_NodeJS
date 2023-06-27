@@ -9,7 +9,7 @@ export default class Aluno extends Model {
         validate: {
           len: {
             args: [3, 255],
-            msg: 'nome precisa ter entre 3 e 255 caracteres',
+            msg: 'Nome precisa ter entre 3 e 255 caracteres.',
           },
         },
       },
@@ -19,16 +19,19 @@ export default class Aluno extends Model {
         validate: {
           len: {
             args: [3, 255],
-            msg: 'sobrenome precisa ter entre 3 e 255 caracteres',
+            msg: 'Sobrenome precisa ter entre 3 e 255 caracteres.',
           },
         },
       },
       email: {
         type: Sequelize.STRING,
         defaultValue: '',
+        unique: {
+          msg: 'E-mail já existe',
+        },
         validate: {
           isEmail: {
-            msg: 'email inválido',
+            msg: 'E-mail inválido',
           },
         },
       },
@@ -37,7 +40,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isInt: {
-            msg: 'idade precisa ser um número inteiro',
+            msg: 'Idade precisa ser um número inteiro',
           },
         },
       },
@@ -46,7 +49,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'peso precisa ser inteiro ou de ponto flutuante',
+            msg: 'Peso precisa ser um número inteiro ou de ponto flutuante',
           },
         },
       },
@@ -55,7 +58,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'altura precisa ser inteiro ou de ponto flutuante',
+            msg: 'Altura precisa ser um número inteiro ou de ponto flutuante',
           },
         },
       },

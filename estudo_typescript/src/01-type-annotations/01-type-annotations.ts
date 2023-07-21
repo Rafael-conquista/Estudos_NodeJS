@@ -72,3 +72,20 @@ function criaErro():never{
   throw new Error('erro qualquer')
 }
 
+//tupo enum
+enum Cores{
+  VERMELHO,
+  AZUL,
+  AMARELO,
+}
+
+//tipo unknown --> igual ao any, mas obriga a existir verificações sobre o seu tipo
+//union types --> uma variavel pode ter mais de um tipo de retorno
+// string|number|boolean
+function add(a:number | string,b:number){
+  if(typeof a === 'number' && typeof b === 'number'){
+    return a+b
+  }
+  return `${a}${b}`
+}
+console.log(add("10",20))

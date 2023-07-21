@@ -88,4 +88,19 @@ function add(a:number | string,b:number){
   }
   return `${a}${b}`
 }
-console.log(add("10",20))
+// usar alias para definir tipos
+type Idade = number
+type Pessoa = {
+  nome: string,
+  idade: Idade,
+  salario ?: number,
+  corPreferida?: string
+}
+
+const alias: Pessoa = {
+  nome: "Rafael",
+  idade: 21,
+  salario: 5000
+}
+
+

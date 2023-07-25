@@ -36,4 +36,3 @@ empresa1.adicionaColaborador(colaborador2)
 empresa1.adicionaColaborador(colaborador3)
 
 console.log(empresa1)
-

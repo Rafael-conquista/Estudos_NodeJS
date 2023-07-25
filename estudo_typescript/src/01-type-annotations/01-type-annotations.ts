@@ -103,4 +103,11 @@ const alias: Pessoa = {
   salario: 5000
 }
 
+//intersection type &
+type novoNome = {nome: string}
+type sobrenome = {sobrenome: string}
+
+type PessoaNova = novoNome & sobrenome
+// os tipos foram "concatenados"
+
 

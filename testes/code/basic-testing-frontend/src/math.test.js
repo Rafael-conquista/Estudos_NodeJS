@@ -34,3 +34,25 @@ it('should yield a correct sum if an array of numeric strings values is provided
     )
     expect(result).toBe(expectedResult)
 })
+
+it('should yield 0 if an empty array is provided',() => {
+    const numbers = []
+
+    const result = add(numbers)
+
+    expect(result).toBe(0)
+})
+
+it('should should throw an error if no value is passed into the function', () => {
+    const resultFn = () => {
+        add()
+    }
+    expect(resultFn).toThrow()
+    //in this case were changed the structure of the test
+})
+
+it('should throw an error if provided with multiple arguments instead of an array', () =>{
+    const resultFn = () => {add(1,5,2)} 
+
+    expect(resultFn).toThrow
+})

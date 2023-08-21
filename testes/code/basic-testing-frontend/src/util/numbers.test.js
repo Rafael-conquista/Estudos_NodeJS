@@ -26,6 +26,7 @@ describe('cleanNumbers()', () => {
         const result = cleanNumbers(numberValues)
 
         expect(result[0]).toBeTypeOf('number')
+        expect(result).toEqual([1, 2])
     })
 
     it('should throw an error if  an array with at leadt on empty string is provided', () => {
